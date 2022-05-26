@@ -14,6 +14,20 @@ test_factory_method::test_factory_method() {
 test_factory_method::~test_factory_method() {
 }
 
+TEST(FactoryMethodSuite, MakeProducts) {
+    creatorA cA;
+    creatorB cB;
+
+    product p = cA.makeProduct(1);
+    EXPECT_EQ(p.show(), "A1");
+    p = cA.makeProduct(2);
+    EXPECT_EQ(p.show(), "A2");
+    p = cB.makeProduct(1);
+    EXPECT_EQ(p.show(), "B1");
+    p = cB.makeProduct(2);
+    EXPECT_EQ(p.show(), "B2");
+}
+
 TEST(FactoryMethodSuite, ProcessProducts) {
     creatorA cA;
     creatorB cB;

@@ -12,7 +12,8 @@ class product {
     product(int, std::string);
     ~product();
 
-    std::string show();
+    virtual std::string show();
+
  protected:
     int productId;
     std::string creatorTag;

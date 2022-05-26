@@ -16,6 +16,8 @@ class creator {
 
     std::string processProduct(int type);
 
+    product makeProduct(int type);
+
  protected:
      virtual product createProduct(int type) = 0;
  private:

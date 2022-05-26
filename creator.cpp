@@ -15,3 +15,7 @@ std::string creator::processProduct(int type) {
     std::string s = p.show();
     return s;
 }
+
+product creator::makeProduct(int type) {
+    return createProduct(type);
+}
