@@ -18,13 +18,13 @@ TEST(FactoryMethodSuite, MakeProducts) {
     creatorA cA;
     creatorB cB;
 
-    auto p = cA.makeProduct(1);
+    auto p = cA.newProduct(1);
     EXPECT_EQ(p->show(), "A1");
-    p = cA.makeProduct(2);
+    p = cA.newProduct(2);
     EXPECT_EQ(p->show(), "A2");
-    p = cB.makeProduct(1);
+    p = cB.newProduct(1);
     EXPECT_EQ(p->show(), "B1");
-    p = cB.makeProduct(2);
+    p = cB.newProduct(2);
     EXPECT_EQ(p->show(), "B2");
 }
 

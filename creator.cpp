@@ -18,6 +18,6 @@ std::string creator::processProduct(int type) {
     return s;
 }
 
-std::shared_ptr<product> creator::makeProduct(int type) {
+std::shared_ptr<product> creator::newProduct(int type) {
     return createProduct(type);
 }
