@@ -17,7 +17,7 @@ class creatorA : public creator {
     ~creatorA();
 
  protected:
-    product createProduct(int type) override;
+    std::shared_ptr<product> createProduct(int type) override;
 
  private:
 };

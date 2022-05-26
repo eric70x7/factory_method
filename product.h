@@ -14,6 +14,10 @@ class product {
 
     virtual std::string show();
 
+    // Verify that creator can work with abstract product
+    // by declaring a pure virtual function
+    virtual void abfun() = 0;
+
  protected:
     int productId;
     std::string creatorTag;

@@ -11,20 +11,20 @@ creatorB::creatorB() {
 creatorB::~creatorB() {
 }
 
-product creatorB::createProduct(int type) {
-    product* prval;
+std::shared_ptr<product> creatorB::createProduct(int type) {
+    std::shared_ptr<product> rval;
     std::string created_by("B");
 
     switch (type) {
     case 1:
-        prval = new product1(created_by);
+        rval = std::shared_ptr<product>(new product1(created_by));
         break;
     case 2:
-        prval = new product2(created_by);
+        rval = std::shared_ptr<product>(new product2(created_by));
         break;
     default:
-        // handle unknown product type
+        // TODO(ej): handle unknown product type
         break;
     }
-    return *prval;
+    return rval;
 }

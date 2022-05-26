@@ -12,6 +12,7 @@ class product2 : public product {
  public:
     explicit product2(std::string);
     ~product2();
+    void abfun() override {};
  private:
 };
 

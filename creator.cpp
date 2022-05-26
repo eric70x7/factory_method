@@ -10,12 +10,14 @@ creator::~creator() {
 
 std::string creator::processProduct(int type) {
     // subclass creates the product
-    product p = createProduct(type);
+    std::shared_ptr<product> p(createProduct(type));
     // creator class processes the product
-    std::string s = p.show();
+    std::string s = p->show();
+    // call pure virtual function to show that we can
+    p->abfun();
     return s;
 }
 
-product creator::makeProduct(int type) {
+std::shared_ptr<product> creator::makeProduct(int type) {
     return createProduct(type);
 }
